@@ -1,0 +1,134 @@
+.clothing-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.clothing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.clothing-card.selected {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-glow);
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.clothing-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-actions {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: flex;
+    gap: var(--spacing-xs);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.clothing-card:hover .card-actions {
+    opacity: 1;
+}
+
+.action-btn {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-size: 1rem;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn:hover {
+    background: var(--primary-glow);
+}
+
+.delete-btn:hover {
+    background: var(--error);
+}
+
+.card-content {
+    padding: var(--spacing-md);
+}
+
+.card-category {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.category-icon {
+    font-size: 1.25rem;
+}
+
+.category-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-secondary);
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-sm);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.color-tag {
+    font-size: 0.75rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-tertiary);
+    text-transform: capitalize;
+}
+
+.generate-btn {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+    font-size: 0.875rem;
+    padding: var(--spacing-sm);
+}
